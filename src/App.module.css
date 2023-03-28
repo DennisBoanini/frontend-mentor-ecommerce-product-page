@@ -1,0 +1,11 @@
+.App {
+    height: calc(100vh - (var(--footer-height) + var(--header-height)));
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 769px) {
+    .no_scroll {
+        overflow: hidden !important;
+    }
+}

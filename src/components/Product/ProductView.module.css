@@ -1,0 +1,344 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 7rem;
+    padding: 0 3rem;
+}
+
+/*LEFT SECTION*/
+
+.images {
+    display: flex;
+    flex-direction: column;
+}
+
+.images > .principal {
+    cursor: pointer;
+}
+
+.images > img {
+    border-radius: 10px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+.thumbnails > img {
+    width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.thumbnails > img:hover {
+    opacity: 0.5;
+}
+
+.thumbnails > .selected {
+    border: solid 2px var(--orange);
+    opacity: 0.3;
+}
+
+.principal {
+    height: 450px;
+    width: 460px;
+    cursor: pointer;
+}
+
+.container > .images > .images_carousel > .previous,
+.container > .images > .images_carousel > .next {
+    display: none;
+}
+
+@media screen and (max-width: 769px) {
+    .container {
+        display: flex;
+        flex-direction: column !important;
+
+        margin-top: unset !important;
+        padding: 0 !important;
+    }
+
+    .images > img {
+        border-radius: unset;
+    }
+
+    .thumbnails {
+        display: none !important;
+    }
+
+    .info {
+        padding: 1rem !important;
+    }
+
+    .actions {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .counter {
+        height: 50px !important;
+        justify-content: space-between !important;
+    }
+
+    .actions > button {
+        width: 100%;
+    }
+
+    .price_container {
+        flex-direction: row !important;
+        justify-content: space-between;
+    }
+
+    .container > .images > .images_carousel > .previous,
+    .container > .images > .images_carousel > .next {
+        display: flex;
+    }
+
+    .images_carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .images_carousel > .previous {
+        position: absolute;
+        left: 5px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 50px;
+        height: 50px;
+    }
+
+    .images_carousel > .next {
+        position: absolute;
+        right: 0;
+    }
+}
+
+/*END LEFT SECTION*/
+
+/*RIGHT SECTION*/
+
+.info {
+    padding: 4rem 14rem;
+}
+
+.info .title {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.info .productName {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    line-height: 3rem;
+}
+
+.info .description {
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
+    color: gray;
+}
+
+.price_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.actual_price_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.actual_price {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.discount {
+    color: var(--orange);
+    background-color: var(--pale-orange);
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.original_price {
+    text-decoration: line-through;
+    font-weight: 700;
+    color: var(--graysh-blue);
+    margin-top: 0.5rem;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    gap: 30px;
+
+    background-color: var(--light-graysh-blue);
+}
+
+.minus, .plus {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    height: 100%;
+}
+
+.minus img, .plus img {
+    object-fit: contain;
+    padding: 0 15px;
+}
+
+.minus:hover, .plus:hover {
+    opacity: 0.6;
+}
+
+.product_counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+
+    font-weight: 700;
+}
+
+/*END RIGHT SECTION*/
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal > .modal_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal > .modal_container > .modal_header > .close {
+    text-align: right;
+    margin-right: 13rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.modal > .modal_container > .modal_header > .close > span {
+    cursor: pointer;
+}
+
+.modal > .modal_container > .modal_header > .close > span:hover {
+    color: var(--orange);
+}
+
+.modal > .modal_container > .modal_content > .principal_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal > .modal_container > .modal_content > .principal_container > .previous, .next {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.modal > .modal_container > .modal_content > .principal_container > .previous {
+    right: -20px;
+}
+
+.modal > .modal_container > .modal_content > .principal_container > .next {
+    left: -20px;
+}
+
+.modal > .modal_container > .modal_content > .principal_container > .next:hover > svg > path, .previous:hover > svg > path {
+    stroke: var(--orange);
+}
+
+.modal > .modal_container > .modal_content > .principal_container > .preview > .images > .thumbnails {
+    width: 500px;
+}
+
+.modal > .modal_container > .modal_content > .principal_container > img,
+.modal > .modal_container > .modal_content > .preview_thumbnails > img{
+    border-radius: 10px;
+}
+
+.modal > .modal_container > .modal_content > .preview_thumbnails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.modal > .modal_container > .modal_content > .preview_thumbnails > .selected {
+    border: solid 2px var(--orange);
+    opacity: 0.3;
+}
+
+/*.close {*/
+/*    text-align: right;*/
+/*    margin-bottom: 1rem;*/
+/*    font-weight: 700;*/
+/*    font-size: 1.5rem;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.close:hover {*/
+/*    color: var(--orange);*/
+/*}*/
+
+/*.principal_container {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/

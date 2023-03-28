@@ -1,0 +1,21 @@
+.button {
+    background-color: var(--orange);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 1rem;
+    width: 250px;
+    color: white;
+    justify-content: center;
+    border: none;
+    height: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.6;
+}

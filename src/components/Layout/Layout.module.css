@@ -1,0 +1,12 @@
+.container {
+    max-width: 1440px;
+    margin: auto;
+    height: 100vh;
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
