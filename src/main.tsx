@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
 import Collections from "./pages/Collections/Collections";
 import Men from "./pages/Men/Men";
@@ -12,7 +12,7 @@ import About from "./pages/About/About";
 import { Provider } from "react-redux";
 import { store } from "./store";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Layout><App/></Layout>,

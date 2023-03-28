@@ -84,7 +84,7 @@ export default function ProductView(props: Props) {
                     </div>
                     <div>
                         <img className={styles.principal}
-                             src={props.product.pictures.find(picture => picture.id === selectedImageId)?.image}
+                             src={`src/assets/${props.product.pictures.find(picture => picture.id === selectedImageId)?.image}`}
                              alt="image"
                              onClick={() => {
                                  setShowPreview(prevState => !prevState);
@@ -100,7 +100,7 @@ export default function ProductView(props: Props) {
                         <img
                             key={picture.id}
                             className={selectedImageId === picture.id ? styles.selected : ''}
-                            src={picture.thumbnail}
+                            src={`src/assets/${picture.thumbnail}`}
                             alt={picture.thumbnail}
                             onClick={() => setSelectedImageId(picture.id)}/>
                     ))}
@@ -156,7 +156,7 @@ export default function ProductView(props: Props) {
                                     <Previous color={'black'}/>
                                 </div>
                                 <img width={'60%'}
-                                     src={props.product.pictures.find(picture => picture.id === previewSelectedImageId)?.image}
+                                     src={`src/assets/${props.product.pictures.find(picture => picture.id === previewSelectedImageId)?.image}`}
                                      alt="image"/>
                                 <div className={styles.next} onClick={() => nextImage('desktop')}>
                                     <Next color={'black'}/>
@@ -168,7 +168,7 @@ export default function ProductView(props: Props) {
                                         width={'10%'}
                                         key={picture.id}
                                         className={previewSelectedImageId === picture.id ? styles.selected : ''}
-                                        src={picture.thumbnail}
+                                        src={`src/assets/${picture.thumbnail}`}
                                         alt={picture.thumbnail}
                                         onClick={() => setPreviewSelectedImageId(picture.id)}/>
                                 ))}
