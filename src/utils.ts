@@ -1,4 +1,12 @@
 import { Product } from "./models/product.model";
+import imageP1 from './assets/image-product-1.jpg';
+import imageP2 from './assets/image-product-2.jpg';
+import imageP3 from './assets/image-product-3.jpg';
+import imageP4 from './assets/image-product-4.jpg';
+import imageP1T from './assets/image-product-1-thumbnail.jpg';
+import imageP2T from './assets/image-product-2-thumbnail.jpg';
+import imageP3T from './assets/image-product-3-thumbnail.jpg';
+import imageP4T from './assets/image-product-4-thumbnail.jpg';
 
 export const navbarItems = [
     {
@@ -41,23 +49,23 @@ export const product: Product = {
     "pictures": [
         {
             "id": 1,
-            "thumbnail": "image-product-1-thumbnail.jpg",
-            "image": "image-product-1.jpg"
+            "thumbnail": imageP1T,
+            "image": imageP1
         },
         {
             "id": 2,
-            "thumbnail": "image-product-2-thumbnail.jpg",
-            "image": "image-product-2.jpg"
+            "thumbnail": imageP2T,
+            "image": imageP2
         },
         {
             "id": 3,
-            "thumbnail": "image-product-3-thumbnail.jpg",
-            "image": "image-product-3.jpg"
+            "thumbnail": imageP3T,
+            "image": imageP3
         },
         {
             "id": 4,
-            "thumbnail": "image-product-4-thumbnail.jpg",
-            "image": "image-product-4.jpg"
+            "thumbnail": imageP4T,
+            "image": imageP4
         }
     ]
 };
