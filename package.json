@@ -1,6 +1,6 @@
 {
   "name": "ecommerce-product-page",
-  "private": true,
+  "homepage": "https://dennisboanini.github.io/frontend-mentor-ecommerce-product-page",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
